@@ -1,0 +1,19 @@
+services:
+  log-generator:
+    build: .
+    container_name: log-generator
+    volumes:
+      - shared_logs:/app/data
+    networks:
+      - log_network
+    restart: unless-stopped
+
+volumes:
+  shared_logs:
+    external: true
+    name: log_ad_shared_logs
+
+networks:
+  log_network:
+    external: true
+    name: log_ad_network

@@ -7,6 +7,8 @@ services:
     networks:
       - log_network
     restart: unless-stopped
+    ports:
+      - 7376:7376
 
 volumes:
   shared_logs:
@@ -17,3 +19,4 @@ networks:
   log_network:
     external: true
     name: log_ad_network
+

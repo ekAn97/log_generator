@@ -499,9 +499,9 @@ class LogGenerator:
 
         # Syslog format
         if pid and pid > 0:
-            line = f"{timestamp} {hostname} {service}[{pid}]: {message} {severity}"
+            line = f"{timestamp} {hostname} {service}[{pid}]: {message}" #{severity}"
         else:
-            line = f"{timestamp} {hostname} {service}: {message} {severity}"
+            line = f"{timestamp} {hostname} {service}: {message}" #{severity}"
 
         # Add metadata
         metadata = f' # ANOMALY = {log_entry["is_anomaly"]}'

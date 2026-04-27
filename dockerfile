@@ -5,7 +5,8 @@ WORKDIR /app
 COPY linux_generator.py .
 COPY entrypoint.sh .
 
-RUN chmod +x entrypoint.sh && \
+RUN sed -i 's/\r$//' entrypoint.sh && \
+    chmod +x entrypoint.sh && \
     mkdir -p /app/data && \
     chmod -R 777 /app/data
 

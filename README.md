@@ -16,6 +16,6 @@ docker compose build
 docker compose up
 ```
 
-**Disclaimer**: Log file currently is accessed within the container only.
+**Disclaimer**: Currently, the produced log file is accessed within the container only.
 
 
